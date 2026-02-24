@@ -1,0 +1,328 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.oppocts"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="28"
+9        android:targetSdkVersion="35" />
+10
+11    <!-- 인터넷 권한 (Google 서비스 상태 확인용) -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\oppocts\app\src\main\AndroidManifest.xml:6:5-67
+12-->C:\oppocts\app\src\main\AndroidManifest.xml:6:22-64
+13
+14    <!-- Shizuku가 사용하는 권한 (선택적) -->
+15    <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
+15-->C:\oppocts\app\src\main\AndroidManifest.xml:9:5-10:47
+15-->C:\oppocts\app\src\main\AndroidManifest.xml:9:22-75
+16
+17    <!-- 부팅 완료 후 자동 복원 -->
+18    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+18-->C:\oppocts\app\src\main\AndroidManifest.xml:13:5-81
+18-->C:\oppocts\app\src\main\AndroidManifest.xml:13:22-78
+19
+20    <!-- 오버레이 허용 (화면 하단 트리거용) -->
+21    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+21-->C:\oppocts\app\src\main\AndroidManifest.xml:16:5-78
+21-->C:\oppocts\app\src\main\AndroidManifest.xml:16:22-75
+22    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+22-->C:\oppocts\app\src\main\AndroidManifest.xml:17:5-77
+22-->C:\oppocts\app\src\main\AndroidManifest.xml:17:22-74
+23    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+23-->C:\oppocts\app\src\main\AndroidManifest.xml:18:5-89
+23-->C:\oppocts\app\src\main\AndroidManifest.xml:18:22-86
+24
+25    <!-- Android 11+ 패키지 가시성: 설치 여부 확인이 필요한 앱 -->
+26    <queries>
+26-->C:\oppocts\app\src\main\AndroidManifest.xml:21:5-26:15
+27        <package android:name="com.google.android.googlequicksearchbox" />
+27-->C:\oppocts\app\src\main\AndroidManifest.xml:22:9-75
+27-->C:\oppocts\app\src\main\AndroidManifest.xml:22:18-72
+28        <package android:name="com.google.android.apps.bard" />
+28-->C:\oppocts\app\src\main\AndroidManifest.xml:23:9-64
+28-->C:\oppocts\app\src\main\AndroidManifest.xml:23:18-61
+29        <package android:name="com.google.android.gms" />
+29-->C:\oppocts\app\src\main\AndroidManifest.xml:24:9-58
+29-->C:\oppocts\app\src\main\AndroidManifest.xml:24:18-55
+30        <package android:name="moe.shizuku.privileged.api" />
+30-->C:\oppocts\app\src\main\AndroidManifest.xml:25:9-62
+30-->C:\oppocts\app\src\main\AndroidManifest.xml:25:18-59
+31    </queries>
+32
+33    <permission
+33-->[androidx.core:core:1.15.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\1ed28ee5b0540846824845f813349021\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+34        android:name="com.oppocts.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+34-->[androidx.core:core:1.15.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\1ed28ee5b0540846824845f813349021\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+35        android:protectionLevel="signature" />
+35-->[androidx.core:core:1.15.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\1ed28ee5b0540846824845f813349021\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+36
+37    <uses-permission android:name="com.oppocts.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+37-->[androidx.core:core:1.15.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\1ed28ee5b0540846824845f813349021\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+37-->[androidx.core:core:1.15.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\1ed28ee5b0540846824845f813349021\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+38
+39    <application
+39-->C:\oppocts\app\src\main\AndroidManifest.xml:28:5-127:19
+40        android:allowBackup="false"
+40-->C:\oppocts\app\src\main\AndroidManifest.xml:29:9-36
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.15.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\1ed28ee5b0540846824845f813349021\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+42        android:debuggable="true"
+43        android:extractNativeLibs="false"
+44        android:icon="@mipmap/ic_launcher"
+44-->C:\oppocts\app\src\main\AndroidManifest.xml:30:9-43
+45        android:label="@string/app_name"
+45-->C:\oppocts\app\src\main\AndroidManifest.xml:31:9-41
+46        android:roundIcon="@mipmap/ic_launcher_round"
+46-->C:\oppocts\app\src\main\AndroidManifest.xml:32:9-54
+47        android:supportsRtl="true"
+47-->C:\oppocts\app\src\main\AndroidManifest.xml:33:9-35
+48        android:theme="@style/Theme.OppoCTS" >
+48-->C:\oppocts\app\src\main\AndroidManifest.xml:34:9-45
+49
+50        <!-- 메인 Activity — 앱 아이콘 탭 시 CTS 즉시 실행 -->
+51        <activity
+51-->C:\oppocts\app\src\main\AndroidManifest.xml:38:9-48:20
+52            android:name="com.oppocts.ui.MainActivity"
+52-->C:\oppocts\app\src\main\AndroidManifest.xml:39:13-44
+53            android:excludeFromRecents="true"
+53-->C:\oppocts\app\src\main\AndroidManifest.xml:42:13-46
+54            android:exported="true"
+54-->C:\oppocts\app\src\main\AndroidManifest.xml:40:13-36
+55            android:taskAffinity=""
+55-->C:\oppocts\app\src\main\AndroidManifest.xml:43:13-36
+56            android:theme="@style/Theme.OppoCTS.Transparent" >
+56-->C:\oppocts\app\src\main\AndroidManifest.xml:41:13-61
+57            <intent-filter>
+57-->C:\oppocts\app\src\main\AndroidManifest.xml:44:13-47:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->C:\oppocts\app\src\main\AndroidManifest.xml:45:17-69
+58-->C:\oppocts\app\src\main\AndroidManifest.xml:45:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->C:\oppocts\app\src\main\AndroidManifest.xml:46:17-77
+60-->C:\oppocts\app\src\main\AndroidManifest.xml:46:27-74
+61            </intent-filter>
+62        </activity>
+63
+64        <!-- 트리거 전용 Activity — 외부 매퍼 연결용 -->
+65        <activity
+65-->C:\oppocts\app\src\main\AndroidManifest.xml:51:9-58:20
+66            android:name="com.oppocts.ui.TriggerActivity"
+66-->C:\oppocts\app\src\main\AndroidManifest.xml:52:13-47
+67            android:excludeFromRecents="true"
+67-->C:\oppocts\app\src\main\AndroidManifest.xml:55:13-46
+68            android:exported="true"
+68-->C:\oppocts\app\src\main\AndroidManifest.xml:53:13-36
+69            android:label="Trigger CTS (No Shizuku)"
+69-->C:\oppocts\app\src\main\AndroidManifest.xml:56:13-53
+70            android:taskAffinity=""
+70-->C:\oppocts\app\src\main\AndroidManifest.xml:57:13-36
+71            android:theme="@style/Theme.OppoCTS.Transparent" >
+71-->C:\oppocts\app\src\main\AndroidManifest.xml:54:13-61
+72        </activity>
+73
+74        <!-- 셋업 위저드 Activity -->
+75        <activity
+75-->C:\oppocts\app\src\main\AndroidManifest.xml:61:9-64:52
+76            android:name="com.oppocts.ui.SetupWizardActivity"
+76-->C:\oppocts\app\src\main\AndroidManifest.xml:62:13-51
+77            android:exported="false"
+77-->C:\oppocts\app\src\main\AndroidManifest.xml:63:13-37
+78            android:theme="@style/Theme.OppoCTS" />
+78-->C:\oppocts\app\src\main\AndroidManifest.xml:64:13-49
+79
+80        <!-- 설정 Activity -->
+81        <activity
+81-->C:\oppocts\app\src\main\AndroidManifest.xml:67:9-70:52
+82            android:name="com.oppocts.ui.SettingsActivity"
+82-->C:\oppocts\app\src\main\AndroidManifest.xml:68:13-48
+83            android:exported="false"
+83-->C:\oppocts\app\src\main\AndroidManifest.xml:69:13-37
+84            android:theme="@style/Theme.OppoCTS" />
+84-->C:\oppocts\app\src\main\AndroidManifest.xml:70:13-49
+85
+86        <!-- Quick Settings 타일 서비스 -->
+87        <service
+87-->C:\oppocts\app\src\main\AndroidManifest.xml:73:9-82:19
+88            android:name="com.oppocts.trigger.CTSTileService"
+88-->C:\oppocts\app\src\main\AndroidManifest.xml:74:13-51
+89            android:exported="true"
+89-->C:\oppocts\app\src\main\AndroidManifest.xml:78:13-36
+90            android:icon="@drawable/ic_cts"
+90-->C:\oppocts\app\src\main\AndroidManifest.xml:75:13-44
+91            android:label="@string/tile_label"
+91-->C:\oppocts\app\src\main\AndroidManifest.xml:76:13-47
+92            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" >
+92-->C:\oppocts\app\src\main\AndroidManifest.xml:77:13-77
+93            <intent-filter>
+93-->C:\oppocts\app\src\main\AndroidManifest.xml:79:13-81:29
+94                <action android:name="android.service.quicksettings.action.QS_TILE" />
+94-->C:\oppocts\app\src\main\AndroidManifest.xml:80:17-87
+94-->C:\oppocts\app\src\main\AndroidManifest.xml:80:25-84
+95            </intent-filter>
+96        </service>
+97
+98        <!-- 접근성 서비스 — 네비바 제스처 감지 -->
+99        <service
+99-->C:\oppocts\app\src\main\AndroidManifest.xml:85:9-95:19
+100            android:name="com.oppocts.service.OppoAccessibilityService"
+100-->C:\oppocts\app\src\main\AndroidManifest.xml:86:13-61
+101            android:exported="false"
+101-->C:\oppocts\app\src\main\AndroidManifest.xml:88:13-37
+102            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+102-->C:\oppocts\app\src\main\AndroidManifest.xml:87:13-79
+103            <intent-filter>
+103-->C:\oppocts\app\src\main\AndroidManifest.xml:89:13-91:29
+104                <action android:name="android.accessibilityservice.AccessibilityService" />
+104-->C:\oppocts\app\src\main\AndroidManifest.xml:90:17-92
+104-->C:\oppocts\app\src\main\AndroidManifest.xml:90:25-89
+105            </intent-filter>
+106
+107            <meta-data
+107-->C:\oppocts\app\src\main\AndroidManifest.xml:92:13-94:72
+108                android:name="android.accessibilityservice"
+108-->C:\oppocts\app\src\main\AndroidManifest.xml:93:17-60
+109                android:resource="@xml/accessibility_service_config" />
+109-->C:\oppocts\app\src\main\AndroidManifest.xml:94:17-69
+110        </service>
+111
+112        <!-- 화면 하단 투명 오버레이 서비스 -->
+113        <service
+113-->C:\oppocts\app\src\main\AndroidManifest.xml:98:9-104:19
+114            android:name="com.oppocts.service.OverlayTriggerService"
+114-->C:\oppocts\app\src\main\AndroidManifest.xml:99:13-58
+115            android:exported="false"
+115-->C:\oppocts\app\src\main\AndroidManifest.xml:100:13-37
+116            android:foregroundServiceType="specialUse" >
+116-->C:\oppocts\app\src\main\AndroidManifest.xml:101:13-55
+117            <property
+117-->C:\oppocts\app\src\main\AndroidManifest.xml:102:13-103:73
+118                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+118-->C:\oppocts\app\src\main\AndroidManifest.xml:102:23-82
+119                android:value="Floating trigger for Circle to Search" />
+119-->C:\oppocts\app\src\main\AndroidManifest.xml:103:17-70
+120        </service>
+121
+122        <!-- Shizuku ContentProvider (Shizuku API 바인딩용) -->
+123        <provider
+124            android:name="rikka.shizuku.ShizukuProvider"
+124-->C:\oppocts\app\src\main\AndroidManifest.xml:108:13-57
+125            android:authorities="com.oppocts.shizuku"
+125-->C:\oppocts\app\src\main\AndroidManifest.xml:109:13-59
+126            android:enabled="true"
+126-->C:\oppocts\app\src\main\AndroidManifest.xml:111:13-35
+127            android:exported="true"
+127-->C:\oppocts\app\src\main\AndroidManifest.xml:112:13-36
+128            android:multiprocess="false"
+128-->C:\oppocts\app\src\main\AndroidManifest.xml:110:13-41
+129            android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+129-->C:\oppocts\app\src\main\AndroidManifest.xml:113:13-79
+130
+131        <!-- 부팅 완료 리시버 — 자동 복원 -->
+132        <receiver
+132-->C:\oppocts\app\src\main\AndroidManifest.xml:117:9-125:20
+133            android:name="com.oppocts.service.BootReceiver"
+133-->C:\oppocts\app\src\main\AndroidManifest.xml:118:13-49
+134            android:exported="true" >
+134-->C:\oppocts\app\src\main\AndroidManifest.xml:119:13-36
+135            <intent-filter>
+135-->C:\oppocts\app\src\main\AndroidManifest.xml:121:13-124:29
+136                <action android:name="android.intent.action.BOOT_COMPLETED" />
+136-->C:\oppocts\app\src\main\AndroidManifest.xml:122:17-79
+136-->C:\oppocts\app\src\main\AndroidManifest.xml:122:25-76
+137                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+137-->C:\oppocts\app\src\main\AndroidManifest.xml:123:17-84
+137-->C:\oppocts\app\src\main\AndroidManifest.xml:123:25-81
+138            </intent-filter>
+139        </receiver>
+140
+141        <provider
+141-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\a35a9395b38d3f85f0c58a47904fb868\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+142            android:name="androidx.startup.InitializationProvider"
+142-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\a35a9395b38d3f85f0c58a47904fb868\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+143            android:authorities="com.oppocts.androidx-startup"
+143-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\a35a9395b38d3f85f0c58a47904fb868\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+144            android:exported="false" >
+144-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\a35a9395b38d3f85f0c58a47904fb868\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+145            <meta-data
+145-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\a35a9395b38d3f85f0c58a47904fb868\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+146                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+146-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\a35a9395b38d3f85f0c58a47904fb868\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+147                android:value="androidx.startup" />
+147-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\a35a9395b38d3f85f0c58a47904fb868\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+148            <meta-data
+148-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\ashiy\.gradle\caches\8.11\transforms\b5be6826b4cfd7f2b6deda8a0382b5b9\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+149                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+149-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\ashiy\.gradle\caches\8.11\transforms\b5be6826b4cfd7f2b6deda8a0382b5b9\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+150                android:value="androidx.startup" />
+150-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\ashiy\.gradle\caches\8.11\transforms\b5be6826b4cfd7f2b6deda8a0382b5b9\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+151            <meta-data
+151-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+152                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+152-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+153                android:value="androidx.startup" />
+153-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+154        </provider>
+155
+156        <uses-library
+156-->[androidx.window:window:1.0.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\bff129ccae45406bc0f8db255ea63806\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+157            android:name="androidx.window.extensions"
+157-->[androidx.window:window:1.0.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\bff129ccae45406bc0f8db255ea63806\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+158            android:required="false" />
+158-->[androidx.window:window:1.0.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\bff129ccae45406bc0f8db255ea63806\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+159        <uses-library
+159-->[androidx.window:window:1.0.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\bff129ccae45406bc0f8db255ea63806\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+160            android:name="androidx.window.sidecar"
+160-->[androidx.window:window:1.0.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\bff129ccae45406bc0f8db255ea63806\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+161            android:required="false" />
+161-->[androidx.window:window:1.0.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\bff129ccae45406bc0f8db255ea63806\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+162
+163        <meta-data
+163-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\ashiy\.gradle\caches\8.11\transforms\e9d8f0434875da8178237c539f6dbfac\transformed\provider-13.1.5\AndroidManifest.xml:11:9-13:36
+164            android:name="moe.shizuku.client.V3_SUPPORT"
+164-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\ashiy\.gradle\caches\8.11\transforms\e9d8f0434875da8178237c539f6dbfac\transformed\provider-13.1.5\AndroidManifest.xml:12:13-57
+165            android:value="true" />
+165-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\ashiy\.gradle\caches\8.11\transforms\e9d8f0434875da8178237c539f6dbfac\transformed\provider-13.1.5\AndroidManifest.xml:13:13-33
+166
+167        <receiver
+167-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+168            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+168-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+169            android:directBootAware="false"
+169-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+170            android:enabled="true"
+170-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+171            android:exported="true"
+171-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+172            android:permission="android.permission.DUMP" >
+172-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+173            <intent-filter>
+173-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+174                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+174-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+174-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+175            </intent-filter>
+176            <intent-filter>
+176-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+177                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+177-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+177-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+178            </intent-filter>
+179            <intent-filter>
+179-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+180                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+180-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+180-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+181            </intent-filter>
+182            <intent-filter>
+182-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+183                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+183-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+183-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ashiy\.gradle\caches\8.11\transforms\29c61ec366c52fa524a773f5b018c823\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+184            </intent-filter>
+185        </receiver>
+186    </application>
+187
+188</manifest>

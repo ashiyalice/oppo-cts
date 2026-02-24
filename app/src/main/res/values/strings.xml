@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OPPO CTS</string>
+    <string name="tile_label">Circle to Search</string>
+
+    <!-- 접근성 서비스 -->
+    <string name="accessibility_service_description">네비게이션 바 길게 누르기를 감지하여 Circle to Search를 실행합니다.</string>
+
+    <!-- CTS 트리거 -->
+    <string name="cts_trigger_failed">CTS 트리거 실패. Google 앱이 기본 어시스턴트로 설정되어 있는지 확인하세요.</string>
+    <string name="cts_trigger_success">Circle to Search 실행됨</string>
+
+    <!-- SetupWizard -->
+    <string name="setup_title">OPPO CTS 설정</string>
+    <string name="setup_step_gms">1단계: GMS 활성화</string>
+    <string name="setup_step_gms_desc">설정 → 앱 관리에서 Google Mobile Services를 활성화하세요.</string>
+    <string name="setup_step_google_app">2단계: Google 앱 설치</string>
+    <string name="setup_step_google_app_desc">Google 앱을 최신 버전으로 설치하거나 업데이트하세요.</string>
+    <string name="setup_step_shizuku">3단계: Shizuku 설치 &amp; 시작</string>
+    <string name="setup_step_shizuku_desc">Shizuku 앱을 설치하고 Wireless ADB로 시작하세요.</string>
+    <string name="setup_step_assistant">4단계: 기본 어시스턴트 변경</string>
+    <string name="setup_step_assistant_desc">기본 디지털 어시스턴트를 Google로 변경합니다.</string>
+    <string name="setup_step_gms_flag">5단계: GMS Flag 설정</string>
+    <string name="setup_step_gms_flag_desc">CTS를 활성화하는 GMS Flag를 설정합니다.</string>
+    <string name="setup_step_gemini">6단계: Gemini 설치</string>
+    <string name="setup_step_gemini_desc">Google Gemini 앱을 설치하세요 (선택사항).</string>
+    <string name="setup_step_trigger">7단계: 트리거 방식 선택</string>
+    <string name="setup_step_trigger_desc">CTS를 실행할 방식을 선택하세요.</string>
+    <string name="setup_complete">설정 완료!</string>
+    <string name="setup_complete_desc">이제 Circle to Search를 사용할 수 있습니다.</string>
+
+    <!-- 버튼 -->
+    <string name="btn_next">다음</string>
+    <string name="btn_back">이전</string>
+    <string name="btn_done">완료</string>
+    <string name="btn_skip">건너뛰기</string>
+    <string name="btn_check">확인</string>
+    <string name="btn_install">설치</string>
+    <string name="btn_apply">적용</string>
+
+    <!-- 설정 -->
+    <string name="settings_title">설정</string>
+    <string name="settings_trigger_method">트리거 방식</string>
+    <string name="settings_trigger_gesture">네비바 길게 누르기</string>
+    <string name="settings_trigger_tile">Quick Settings 타일</string>
+    <string name="settings_trigger_app">앱 아이콘 탭</string>
+    <string name="settings_status">상태</string>
+    <string name="settings_status_google">Google 앱</string>
+    <string name="settings_status_gms">GMS</string>
+    <string name="settings_status_shizuku">Shizuku</string>
+    <string name="settings_status_accessibility">접근성 서비스</string>
+    <string name="settings_status_active">활성</string>
+    <string name="settings_status_inactive">비활성</string>
+    <string name="settings_status_not_installed">미설치</string>
+    <string name="settings_rerun_setup">설정 다시 실행</string>
+
+    <!-- 상태 메시지 -->
+    <string name="shizuku_not_installed">Shizuku가 설치되어 있지 않습니다.</string>
+    <string name="shizuku_not_running">Shizuku가 실행 중이 아닙니다.</string>
+    <string name="shizuku_permission_denied">Shizuku 권한이 거부되었습니다.</string>
+    <string name="google_app_not_found">Google 앱을 찾을 수 없습니다.</string>
+    <string name="assistant_set_success">기본 어시스턴트가 Google로 변경되었습니다.</string>
+    <string name="assistant_set_failed">어시스턴트 변경에 실패했습니다.</string>
+    <string name="gms_flag_set_success">GMS Flag가 설정되었습니다.</string>
+    <string name="gms_flag_set_failed">GMS Flag 설정에 실패했습니다.</string>
+</resources>

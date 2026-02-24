@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oppocts"
+    android:versionCode="1"
+    android:versionName="1.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="28"
+        android:targetSdkVersion="35" />
+
+    <!-- 인터넷 권한 (Google 서비스 상태 확인용) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Shizuku가 사용하는 권한 (선택적) -->
+    <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
+
+    <!-- 부팅 완료 후 자동 복원 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 오버레이 허용 (화면 하단 트리거용) -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <!-- Android 11+ 패키지 가시성: 설치 여부 확인이 필요한 앱 -->
+    <queries>
+        <package android:name="com.google.android.googlequicksearchbox" />
+        <package android:name="com.google.android.apps.bard" />
+        <package android:name="com.google.android.gms" />
+        <package android:name="moe.shizuku.privileged.api" />
+    </queries>
+
+    <permission
+        android:name="com.oppocts.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.oppocts.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OppoCTS" >
+
+        <!-- 메인 Activity — 앱 아이콘 탭 시 CTS 즉시 실행 -->
+        <activity
+            android:name="com.oppocts.ui.MainActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:taskAffinity=""
+            android:theme="@style/Theme.OppoCTS.Transparent" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 트리거 전용 Activity — 외부 매퍼 연결용 -->
+        <activity
+            android:name="com.oppocts.ui.TriggerActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="Trigger CTS (No Shizuku)"
+            android:taskAffinity=""
+            android:theme="@style/Theme.OppoCTS.Transparent" >
+        </activity>
+
+        <!-- 셋업 위저드 Activity -->
+        <activity
+            android:name="com.oppocts.ui.SetupWizardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.OppoCTS" />
+
+        <!-- 설정 Activity -->
+        <activity
+            android:name="com.oppocts.ui.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.OppoCTS" />
+
+        <!-- Quick Settings 타일 서비스 -->
+        <service
+            android:name="com.oppocts.trigger.CTSTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_cts"
+            android:label="@string/tile_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" >
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- 접근성 서비스 — 네비바 제스처 감지 -->
+        <service
+            android:name="com.oppocts.service.OppoAccessibilityService"
+            android:exported="false"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <!-- 화면 하단 투명 오버레이 서비스 -->
+        <service
+            android:name="com.oppocts.service.OverlayTriggerService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" >
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Floating trigger for Circle to Search" />
+        </service>
+
+        <!-- Shizuku ContentProvider (Shizuku API 바인딩용) -->
+        <provider
+            android:name="rikka.shizuku.ShizukuProvider"
+            android:authorities="com.oppocts.shizuku"
+            android:enabled="true"
+            android:exported="true"
+            android:multiprocess="false"
+            android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+        <!-- 부팅 완료 리시버 — 자동 복원 -->
+        <receiver
+            android:name="com.oppocts.service.BootReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.oppocts.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
+        <meta-data
+            android:name="moe.shizuku.client.V3_SUPPORT"
+            android:value="true" />
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

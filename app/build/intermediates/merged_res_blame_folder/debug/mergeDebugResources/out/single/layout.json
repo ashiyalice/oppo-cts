@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.oppocts.app-mergeDebugResources-40:/layout/activity_settings.xml",
+        "source": "com.oppocts.app-main-43:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-mergeDebugResources-40:\\layout\\activity_settings.xml",
+        "source": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-main-43:\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-mergeDebugResources-40:\\layout\\activity_setup_wizard.xml",
+        "source": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-main-43:\\layout\\activity_setup_wizard.xml"
+    }
+]

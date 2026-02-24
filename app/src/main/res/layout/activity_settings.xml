@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- 타이틀 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_light"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 상태 대시보드 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_status"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_light"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Google 앱 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/settings_status_google"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_light" />
+
+            <TextView
+                android:id="@+id/tv_google_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- GMS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/settings_status_gms"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_light" />
+
+            <TextView
+                android:id="@+id/tv_gms_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Shizuku -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/settings_status_shizuku"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_light" />
+
+            <TextView
+                android:id="@+id/tv_shizuku_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 접근성 서비스 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/settings_status_accessibility"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_light" />
+
+            <TextView
+                android:id="@+id/tv_accessibility_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 기본 어시스턴트 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/settings_trigger_method"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_light" />
+
+            <TextView
+                android:id="@+id/tv_assistant_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- CTS Flag -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CTS Flag"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_light" />
+
+            <TextView
+                android:id="@+id/tv_flag_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 버튼들 -->
+        <Button
+            android:id="@+id/btn_test_cts"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🔍 CTS 테스트"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 플로팅 하단 트리거 (시즈쿠 없는 방식) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌟 완벽한 하단 트리거 (강력 추천)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_light"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shizuku 없이 화면 맨 아래를 꾹 눌러 CTS를 실행합니다. 와이파이가 꺼져도 작동합니다."
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary_light"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 플로팅 하단 트리거 활성화 스위치 -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_overlay_trigger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="투명 하단 트리거 활성화"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 오버레이 디테일 설정 (활성화 시에만 접근 권장) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#08000000">
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_overlay_debug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="디버그 모드 (영역 붉게 표시)"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상하 위치 조절 (Offset Y)"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary_light" />
+
+            <SeekBar
+                android:id="@+id/seekbar_overlay_offset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="200"
+                android:progress="100"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="터치 영역 두께 (Height)"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary_light" />
+
+            <SeekBar
+                android:id="@+id/seekbar_overlay_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="200"
+                android:progress="90"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- 트리거 방식 선택 (기존 접근성 기반) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎮 버튼 매핑 (접근성 서비스)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_light"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="접근성 서비스가 활성화된 경우, 아래 선택한 버튼 조합으로 CTS를 실행합니다."
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary_light"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_trigger_method"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btn_key_test"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🔑 키 감지 테스트"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/btn_intent_test"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🪄 Shizuku 없이 테스트"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_key_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="버튼을 눌러 키 이벤트가 감지되는지 확인하세요."
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/text_secondary_light"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_secondary_light"
+            android:alpha="0.3"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_open_accessibility"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="접근성 설정 열기"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btn_rerun_setup"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/settings_rerun_setup"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btn_refresh"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="새로고침" />
+
+    </LinearLayout>
+</ScrollView>

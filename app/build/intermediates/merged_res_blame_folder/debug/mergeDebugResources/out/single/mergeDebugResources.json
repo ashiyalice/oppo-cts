@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-debug-41:\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-main-43:\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-debug-41:\\xml_accessibility_service_config.xml.flat",
+        "source": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-main-43:\\xml\\accessibility_service_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-debug-41:\\drawable_ic_cts.xml.flat",
+        "source": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-main-43:\\drawable\\ic_cts.xml"
+    },
+    {
+        "merged": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-debug-41:\\drawable_status_background.xml.flat",
+        "source": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-main-43:\\drawable\\status_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-debug-41:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-main-43:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-debug-41:\\layout_activity_setup_wizard.xml.flat",
+        "source": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-main-43:\\layout\\activity_setup_wizard.xml"
+    },
+    {
+        "merged": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-debug-41:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\ashiy\\.gradle\\daemon\\8.11\\com.oppocts.app-main-43:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.oppocts.app-debug-41:/layout_activity_settings.xml.flat",
+        "source": "com.oppocts.app-main-43:/layout/activity_settings.xml"
+    }
+]
