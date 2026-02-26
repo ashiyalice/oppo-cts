@@ -13,19 +13,19 @@
     <!-- SetupWizard -->
     <string name="setup_title">OPPO CTS 설정</string>
     <string name="setup_step_gms">1단계: GMS 활성화</string>
-    <string name="setup_step_gms_desc">설정 → 앱 관리에서 Google Mobile Services를 활성화하세요.</string>
+    <string name="setup_step_gms_desc">중국 롬 기기(ColorOS 등)에서는 구글 서비스가 꺼져 있는 경우가 많습니다.\n\n[설정] → [앱] → [앱 관리] 메뉴로 이동하여 우측 상단의 점 3개 메뉴를 누르고 \'시스템 표시\'를 켠 뒤, \'Google Play 서비스\' 및 \'Google Services Framework\'가 활성화되어 있는지 확인해 주세요.</string>
     <string name="setup_step_google_app">2단계: Google 앱 설치</string>
-    <string name="setup_step_google_app_desc">Google 앱을 최신 버전으로 설치하거나 업데이트하세요.</string>
+    <string name="setup_step_google_app_desc">서클 투 서치 기능은 구글 앱에 내장되어 있습니다.\n\nPlay 스토어에서 최신 버전의 \'Google\' 앱을 검색하여 설치하거나 업데이트 해주세요. 이미 설치되어 있다면 한 번 실행하여 초기 설정을 완료해 두는 것이 좋습니다.</string>
     <string name="setup_step_shizuku">3단계: Shizuku 설치 &amp; 시작</string>
-    <string name="setup_step_shizuku_desc">Shizuku 앱을 설치하고 Wireless ADB로 시작하세요.</string>
+    <string name="setup_step_shizuku_desc">이 앱이 시스템 설정을 우회하기 위해서는 임시로 시스템 수준의 권한(ADB 권한)이 필요합니다.\n\nPlay 스토어나 GitHub에서 \'Shizuku\' 앱을 다운로드 받아 설치한 후, \'무선 디버깅\' 기능을 이용하여 Shizuku를 시작(Running) 상태로 만들어 주세요. 완료 후 아래 [확인]을 눌러 권한을 허용해 주세요.</string>
     <string name="setup_step_assistant">4단계: 기본 어시스턴트 변경</string>
-    <string name="setup_step_assistant_desc">기본 디지털 어시스턴트를 Google로 변경합니다.</string>
+    <string name="setup_step_assistant_desc">서클 투 서치는 기기의 기본 디지털 어시스턴트(AI 비서)를 Google로 설정해야 작동합니다.\n\n아래 [적용] 버튼을 누르면 이 앱이 Shizuku 권한을 사용하여 시스템의 기본 디지털 어시스턴트를 Breeno(또는 기타 비서)에서 Google로 강제 변경합니다.</string>
     <string name="setup_step_gms_flag">5단계: GMS Flag 설정</string>
-    <string name="setup_step_gms_flag_desc">CTS를 활성화하는 GMS Flag를 설정합니다.</string>
+    <string name="setup_step_gms_flag_desc">중국 내수용 기기는 기본적으로 구글 앱에서 서클 투 서치 기능이 잠겨 있습니다.\n\n아래 [적용] 버튼을 누르면 Shizuku 권한을 이용해 구글 앱의 내부 플래그(설정값)를 조작하여 서클 투 서치 기능을 강제로 활성화합니다.</string>
     <string name="setup_step_gemini">6단계: Gemini 설치</string>
-    <string name="setup_step_gemini_desc">Google Gemini 앱을 설치하세요 (선택사항).</string>
+    <string name="setup_step_gemini_desc">구글의 최신 인공지능인 Gemini를 기본 어시스턴트로 사용하려면 Play 스토어에서 \'Google Gemini\' 앱을 설치하세요.\n\n설치하지 않아도 서클 투 서치 기능은 구글 앱을 통해 정상적으로 작동하므로 건너뛰어도 무방합니다.</string>
     <string name="setup_step_trigger">7단계: 트리거 방식 선택</string>
-    <string name="setup_step_trigger_desc">CTS를 실행할 방식을 선택하세요.</string>
+    <string name="setup_step_trigger_desc">어떤 방식으로 서클 투 서치를 실행할지 선택합니다.\n\n[네비바 길게 누르기(추천)]\n화면 하단에 보이지 않는 투명 창을 띄워, 순정 폰처럼 홈 바를 꾹 눌러 실행합니다.\n\n[Quick Settings 타일]\n상단바 빠른 설정 창에 버튼을 추가하여 실행합니다.\n\n설정 완료 후에도 앱 내에서 언제든지 변경할 수 있습니다.</string>
     <string name="setup_complete">설정 완료!</string>
     <string name="setup_complete_desc">이제 Circle to Search를 사용할 수 있습니다.</string>
 
